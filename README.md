@@ -1,32 +1,26 @@
-# React + TypeScript + Vite
+# SIPRAK
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+SIPRAK adalah aplikasi pengumpulan dan penilaian tugas praktikum untuk asprak
+dan praktikan.
 
-Currently, two official plugins are available:
+## Menjalankan aplikasi
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Pastikan Node.js dan npm tersedia.
+2. Pasang dependency dengan `npm install`.
+3. Salin `.env.example` menjadi `.env.local`, lalu isi konfigurasi Supabase.
+4. Jalankan `npm run dev` dan buka alamat yang ditampilkan Vite.
 
-## React Compiler
+Perintah pemeriksaan:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `npm run lint` — pemeriksaan kode.
+- `npm run build` — pemeriksaan TypeScript dan build produksi.
 
-## Expanding the Oxlint configuration
+## Environment variables
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+| Nama | Keterangan |
+|---|---|
+| `VITE_SUPABASE_URL` | Project URL Supabase |
+| `VITE_SUPABASE_ANON_KEY` | Anon/publishable key Supabase; jangan gunakan `service_role` |
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+File `.env.local` tidak boleh dimasukkan ke Git. Nilai untuk deployment diatur
+melalui environment variables di Vercel.
