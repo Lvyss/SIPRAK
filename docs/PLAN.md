@@ -4,12 +4,12 @@ Kerjakan satu tahap per sesi, berurutan. Tahap dianggap selesai hanya jika semua
 
 Prasyarat (manusia, sebelum Tahap 0): project Vite React-TS sudah dibuat dan `npm install` selesai; paket `@supabase/supabase-js`, `react-router-dom`, `tailwindcss`, `@tailwindcss/vite`, `lucide-react` terpasang; `supabase` terpasang sebagai dev dependency dan `npx supabase init` sudah dijalankan; file `.github/workflows/ci.yml` dan `migrate.yml` sudah ada di repo.
 
-## [ ] Tahap 0 — Fondasi project
+## [x] Tahap 0 — Fondasi project
 **Manusia (sekali di awal):**
-- [ ] Repo di GitHub (private), workflow `ci.yml` dan `migrate.yml` ada
-- [ ] 3 secret GitHub terisi: `SUPABASE_ACCESS_TOKEN`, `SUPABASE_DB_PASSWORD`, `SUPABASE_PROJECT_ID`
-- [ ] Import repo ke Vercel, isi env, deploy pertama
-- [ ] Supabase: "Confirm email" dimatikan (development) dan Redirect URLs diisi (localhost + domain Vercel)
+- [x] Repo di GitHub (private), workflow `ci.yml` dan `migrate.yml` ada
+- [x] 3 secret GitHub terisi: `SUPABASE_ACCESS_TOKEN`, `SUPABASE_DB_PASSWORD`, `SUPABASE_PROJECT_ID`
+- [x] Import repo ke Vercel, isi env, deploy pertama
+- [x] Supabase: "Confirm email" dimatikan (development) dan Redirect URLs diisi (localhost + domain Vercel)
 - [ ] (Opsional) `.vscode/mcp.json` read-only + project_ref
 
 **Tugas**
